@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  background: rgb(216, 213, 208);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.flip-card {
+  width: 375px;
+  height: 225px;
+  transition: 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+  transform: rotateY(180deg);
+}
+
+.container .card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #9400d3;
+  border-radius: 10px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backface-visibility: hidden;
+}
+
+.card-front .logo {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 25px 25px 0 25px;
+}
+
+.card-front .infos {
+  padding-left: 25px;
+}
+
+.card-front .chip {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.card-front .name {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.card-front .logo img {
+  width: 80px;
+}
+
+.card-front .chip img{
+  width: 50px;
+}
+
+.card-front .name img{
+  width: 50px;
+}
+
+.card-front .name h1 {
+  font-size: 15px;
+  margin-left: 10px;
+  font-weight: 300;
+  color: rgb(216, 213, 208);
+  text-transform: uppercase;
+}
+
+.card.card-back {
+  display: flex;
+  align-items: flex-end;
+  transform: rotateY(180deg);
+}
+
+.card.card-back .card-infos {
+  padding: 25px;
+}
+
+.card.card-back {
+  display: flex;
+  justify-content: start;
+}
+
+.card.card-back .member-since {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.card.card-back .valid-thru {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.card.card-back .security-code {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.card.card-back .dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card.card-back .card-infos h2 {
+  color: rgb(216, 213, 208);
+}
+
+.card.card-back .dates span {
+  width: 20px;
+  font-size: 4px;
+  color: rgb(216, 213, 208);
+}
+
+.card.card-back .dates h6 {
+  color: rgb(216, 213, 208);
+}
