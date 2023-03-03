@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#898B2A, #0F1008);
+}
+
+.card {
+  position: relative;
+  width: 320px;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card .poster {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .poster::before {
+  content: '';
+  position: absolute;
+  bottom: -180px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #898B2A 50%, transparent);
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.card:hover .poster::before {
+  bottom: 0px;
+}
+
+.card .poster img {
+  width: 100%;
+  transition: 0.5s;
+}
+
+.card:hover .poster img {
+  transform: translateY(-50px);
+  filter: blur(5px);
+}
+
+.card .details .logo {
+  width: 180px;
+}
+
+.card:hover .details {
+  bottom: 0px;
+}
+
+.card .details {
+  position: absolute;
+  width: 100%;
+  bottom: -200px;
+  left: 0;
+  padding: 20px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.card .details h3 {
+  font-size: 0.8em;
+  color: #fff;
+}
+
+.card .details .rating {
+  position: relative;
+  padding: 5px 0;
+}
+
+.card .details .rating .fa-star {
+  color: #f7f406;
+  font-size: 1em;
+}
+
+.card .details .rating span {
+  color: #fff;
+  margin-left: 5px;
+}
+
+.card .details .tags span {
+  padding: 2px 5px;
+  color: #fff;
+  background: #026926;
+  border-radius: 4px;
+}
+
+.card .details .info {
+  color: #fff;
+  margin-top: 10px;
+}
